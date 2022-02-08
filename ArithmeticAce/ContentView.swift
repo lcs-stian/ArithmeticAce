@@ -22,11 +22,23 @@ struct ContentView: View {
                 }
                 
             }
-            Divider()
-                .font(.system(size: 72))
+            
+            
+            
+            
+             Divider()
+            
+            HStack {
+                
+                Spacer()
+                
+                Text("30")
+            }
         }
-        .padding(50)
+        .padding()
+        .font(.system(size: 72))
         
+      
         
     }
 }
