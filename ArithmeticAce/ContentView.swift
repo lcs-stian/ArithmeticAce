@@ -16,7 +16,10 @@ struct ContentView: View {
     //holds the user's input
     @State var inputGiven = ""
     
-    
+    var correctAnswer: Int {
+        return mulpiplicand * multiplier
+        
+    }
     var body: some View {
         VStack (spacing:0) {
             HStack {
@@ -45,12 +48,24 @@ struct ContentView: View {
             }
             
             Button(action: {
+                //Guard statment to connect the input
+                guard let answerGiven = Int(inputGiven) else {
+                    //inputis invalid
+                    return
+                }
                 //check the answer
+                if answerGiven == correctAnswer {
+                    //show the checkmarks
+                }
+                
             }, label: {
                 //Label
                 Text("Check answer")
                     .font(.largeTitle)
             })
+                .buttonStyle(.bordered)
+                .padding()
+            
         }
         .padding()
         .font(.system(size: 72))
