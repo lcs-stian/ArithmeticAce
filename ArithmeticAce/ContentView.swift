@@ -32,20 +32,30 @@ struct ContentView: View {
                 
             }
             
-             Divider()
+            Divider()
             
             HStack {
                 
                 
                 Spacer()
                 
-                TextField("Enter a product", text: $inputGiven)
+                TextField("",
+                          text: $inputGiven)
+                    .multilineTextAlignment(.trailing)
             }
+            
+            Button(action: {
+                //check the answer
+            }, label: {
+                //Label
+                Text("Check answer")
+                    .font(.largeTitle)
+            })
         }
         .padding()
         .font(.system(size: 72))
         
-      
+        
         
     }
 }
