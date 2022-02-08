@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    let mulpiplicand = Int.random(in: 1...12)
+    let multiplier = Int.random(in: 1...12)
+    
     var body: some View {
         VStack (spacing:0) {
             HStack {
@@ -16,9 +21,9 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                VStack {
-                    Text("5")
-                    Text("6")
+                VStack(alignment: .trailing) {
+                    Text("\(mulpiplicand)")
+                    Text("\(multiplier)")
                 }
                 
             }
